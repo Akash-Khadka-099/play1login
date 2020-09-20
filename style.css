@@ -12,13 +12,14 @@ body{
 
 .main-content{
     width: calc(100%-65%);
-    max-width: 100%;
-    height: auto;
+    height: calc(100%-95%);
+    /* height: auto; */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     border-radius: 7px 7px 0px 0px;
+    background-color: white;
     
 
 }
@@ -34,13 +35,14 @@ body{
 }
 
 .main-content .form-control{
-    margin: 15px;
+    margin: 15px 15px 0px;
     max-width: 100%;
     display: block;
 }
 
 .form-control label{
     text-transform: capitalize;
+    margin-bottom: 4px;
 }
 
 .form-control .fa-check-circle{
@@ -57,11 +59,20 @@ body{
     visibility: hidden;
 }
 
+.form-control small{
+    visibility: hidden;
+}
+
 .form-control input{
     width: 100%;
     height: 30px;
     outline: none;
+    border: 1px solid rgb(44, 43, 43);
+    
+}
 
+.form-control input:focus{
+    border: 2px solid rgb(190, 190, 103);
 }
 
 
@@ -70,18 +81,28 @@ body{
 
 .main-content .btn{
     background: linear-gradient(to right,rgb(214, 35, 169),rgb(42, 98, 218));
-    margin: 15px;
-    width: 100%;
+    margin: 15px 15px;
+    width: 93%;
     height: 40px;
     padding: 7px;
     font-size: 15px;
     outline: none;
     border: none;
     border-radius: 8px;
+    position: relative;
+    display: block;
 }
 
 .main-content .btn:hover{
     background: linear-gradient(to left,rgb(214, 35, 169),rgb(42, 98, 218));
+}
+
+.form-control.sucess input{
+    border-color: greenyellow;
+}
+
+.form-control.error input{
+    border-color: greenyellow;
 }
 
 @media only screen and (max-width: 990px){
